@@ -1,0 +1,55 @@
+# Robots.txt para Tronco Forte
+# https://www.troncoforte.com.br/robots.txt
+
+User-agent: *
+Allow: /
+
+# Bloquear acesso a diretórios administrativos
+Disallow: /app/
+Disallow: /vendor/
+Disallow: /composer.json
+Disallow: /composer.lock
+Disallow: /.env
+Disallow: /README.md
+
+# Bloquear arquivos de log e cache
+Disallow: /app/log/
+Disallow: /app/cache/
+
+# Permitir acesso aos assets
+Allow: /assets/
+
+# Sitemap (quando disponível)
+# Sitemap: https://www.troncoforte.com.br/sitemap.xml
+
+# Crawl-delay para bots mais agressivos
+User-agent: Baiduspider
+Crawl-delay: 5
+
+User-agent: YandexBot
+Crawl-delay: 3
+
+# Permitir todos os bots de busca principais
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
