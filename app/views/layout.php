@@ -88,7 +88,7 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="/" class="flex items-center">
+                    <a href="<?= $base_path ?: '/' ?>" class="flex items-center">
                         <span class="text-2xl font-bold text-tronco-brown">Tronco Forte</span>
                     </a>
                 </div>
@@ -96,11 +96,11 @@
                 <!-- Menu Desktop -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="/" class="<?= ($current_page ?? '') === 'home' ? 'text-tronco-orange border-b-2 border-tronco-orange' : 'text-tronco-gray hover:text-tronco-orange' ?> px-3 py-2 text-sm font-medium transition-colors duration-200">Início</a>
-                        <a href="/sobre" class="<?= ($current_page ?? '') === 'about' ? 'text-tronco-orange border-b-2 border-tronco-orange' : 'text-tronco-gray hover:text-tronco-orange' ?> px-3 py-2 text-sm font-medium transition-colors duration-200">Sobre Nós</a>
-                        <a href="/produtos" class="<?= ($current_page ?? '') === 'products' ? 'text-tronco-orange border-b-2 border-tronco-orange' : 'text-tronco-gray hover:text-tronco-orange' ?> px-3 py-2 text-sm font-medium transition-colors duration-200">Produtos</a>
-                        <a href="/sustentabilidade" class="<?= ($current_page ?? '') === 'sustainability' ? 'text-tronco-orange border-b-2 border-tronco-orange' : 'text-tronco-gray hover:text-tronco-orange' ?> px-3 py-2 text-sm font-medium transition-colors duration-200">Sustentabilidade</a>
-                        <a href="/contato" class="<?= ($current_page ?? '') === 'contact' ? 'bg-tronco-orange text-white' : 'bg-tronco-brown text-white hover:bg-tronco-orange' ?> px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200">Contato</a>
+                        <a href="<?= $base_path ?: '/' ?>" class="<?= ($current_page ?? '') === 'home' ? 'text-tronco-orange border-b-2 border-tronco-orange' : 'text-tronco-gray hover:text-tronco-orange' ?> px-3 py-2 text-sm font-medium transition-colors duration-200">Início</a>
+                        <a href="<?= $base_path ?>/sobre" class="<?= ($current_page ?? '') === 'about' ? 'text-tronco-orange border-b-2 border-tronco-orange' : 'text-tronco-gray hover:text-tronco-orange' ?> px-3 py-2 text-sm font-medium transition-colors duration-200">Sobre Nós</a>
+                        <a href="<?= $base_path ?>/produtos" class="<?= ($current_page ?? '') === 'products' ? 'text-tronco-orange border-b-2 border-tronco-orange' : 'text-tronco-gray hover:text-tronco-orange' ?> px-3 py-2 text-sm font-medium transition-colors duration-200">Produtos</a>
+                        <a href="<?= $base_path ?>/sustentabilidade" class="<?= ($current_page ?? '') === 'sustainability' ? 'text-tronco-orange border-b-2 border-tronco-orange' : 'text-tronco-gray hover:text-tronco-orange' ?> px-3 py-2 text-sm font-medium transition-colors duration-200">Sustentabilidade</a>
+                        <a href="<?= $base_path ?>/contato" class="<?= ($current_page ?? '') === 'contact' ? 'bg-tronco-orange text-white' : 'bg-tronco-brown text-white hover:bg-tronco-orange' ?> px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200">Contato</a>
                     </div>
                 </div>
                 
@@ -116,11 +116,11 @@
         <!-- Menu Mobile -->
         <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white border-t border-gray-200">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="/" class="<?= ($current_page ?? '') === 'home' ? 'bg-tronco-beige text-tronco-orange' : 'text-tronco-gray hover:bg-tronco-beige hover:text-tronco-orange' ?> block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Início</a>
-                <a href="/sobre" class="<?= ($current_page ?? '') === 'about' ? 'bg-tronco-beige text-tronco-orange' : 'text-tronco-gray hover:bg-tronco-beige hover:text-tronco-orange' ?> block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Sobre Nós</a>
-                <a href="/produtos" class="<?= ($current_page ?? '') === 'products' ? 'bg-tronco-beige text-tronco-orange' : 'text-tronco-gray hover:bg-tronco-beige hover:text-tronco-orange' ?> block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Produtos</a>
-                <a href="/sustentabilidade" class="<?= ($current_page ?? '') === 'sustainability' ? 'bg-tronco-beige text-tronco-orange' : 'text-tronco-gray hover:bg-tronco-beige hover:text-tronco-orange' ?> block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Sustentabilidade</a>
-                <a href="/contato" class="bg-tronco-orange text-white block px-3 py-2 rounded-md text-base font-medium mx-3 mb-2 text-center">Contato</a>
+                <a href="<?= $base_path ?: '/' ?>" class="<?= ($current_page ?? '') === 'home' ? 'bg-tronco-beige text-tronco-orange' : 'text-tronco-gray hover:bg-tronco-beige hover:text-tronco-orange' ?> block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Início</a>
+                <a href="<?= $base_path ?>/sobre" class="<?= ($current_page ?? '') === 'about' ? 'bg-tronco-beige text-tronco-orange' : 'text-tronco-gray hover:bg-tronco-beige hover:text-tronco-orange' ?> block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Sobre Nós</a>
+                <a href="<?= $base_path ?>/produtos" class="<?= ($current_page ?? '') === 'products' ? 'bg-tronco-beige text-tronco-orange' : 'text-tronco-gray hover:bg-tronco-beige hover:text-tronco-orange' ?> block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Produtos</a>
+                <a href="<?= $base_path ?>/sustentabilidade" class="<?= ($current_page ?? '') === 'sustainability' ? 'bg-tronco-beige text-tronco-orange' : 'text-tronco-gray hover:bg-tronco-beige hover:text-tronco-orange' ?> block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Sustentabilidade</a>
+                <a href="<?= $base_path ?>/contato" class="bg-tronco-orange text-white block px-3 py-2 rounded-md text-base font-medium mx-3 mb-2 text-center">Contato</a>
             </div>
         </div>
     </nav>

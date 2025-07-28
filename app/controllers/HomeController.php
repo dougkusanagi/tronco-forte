@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\utils\UrlHelper;
 use flight\Engine;
 use Exception;
 
@@ -30,6 +31,9 @@ class HomeController
         
         // Render the layout with the content
         $data['content'] = $content;
+        $data['base_path'] = UrlHelper::getBasePath();
+        $data['url_helper'] = UrlHelper::class;
+        
         $this->app->render('layout', $data);
     }
 
@@ -49,6 +53,9 @@ class HomeController
         
         // Render the layout with the content
         $data['content'] = $content;
+        $data['base_path'] = UrlHelper::getBasePath();
+        $data['url_helper'] = UrlHelper::class;
+
         $this->app->render('layout', $data);
     }
 
@@ -68,6 +75,9 @@ class HomeController
         
         // Render the layout with the content
         $data['content'] = $content;
+        $data['base_path'] = UrlHelper::getBasePath();
+        $data['url_helper'] = UrlHelper::class;
+
         $this->app->render('layout', $data);
     }
 
@@ -87,6 +97,9 @@ class HomeController
         
         // Render the layout with the content
         $data['content'] = $content;
+        $data['base_path'] = UrlHelper::getBasePath();
+        $data['url_helper'] = UrlHelper::class;
+
         $this->app->render('layout', $data);
     }
 
@@ -106,6 +119,9 @@ class HomeController
         
         // Render the layout with the content
         $data['content'] = $content;
+        $data['base_path'] = UrlHelper::getBasePath();
+        $data['url_helper'] = UrlHelper::class;
+        
         $this->app->render('layout', $data);
     }
 
